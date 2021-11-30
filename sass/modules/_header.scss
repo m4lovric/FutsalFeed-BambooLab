@@ -1,0 +1,129 @@
+@import 'base';
+
+.header__container {
+  width: 100%;
+  background-image: url("/assets/header/header-img.png");
+}
+
+.header {
+  @extend %grid-12;
+  margin: 0 auto;
+  max-width: 1920px;
+  height: 980px;
+  grid-template-rows: repeat(4, 1fr);
+
+  &__nav {
+    grid-column: 1 / 13;
+    height: 56px;
+    @extend %grid-12;
+    align-items: center;
+    margin-top: 44px;
+  }
+
+  &__btn {
+    height: 48px;
+    width: 134px;
+    align-self: start;
+    @extend %inter-bold;
+    color: $white;
+    background-color: $primary;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    align-self: start;
+  }
+
+  &__title {
+    grid-column: 2 / 8;
+    grid-row: 2 / 4;
+    align-self: center;
+    margin: 0;
+    @extend %inter-bold;
+    font-size: 4rem;
+    color: $white;
+    line-height: 1.125;
+  }
+
+  &__date {
+    @extend %inter-semibold;
+    color: $white-opacity;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    align-self: end;
+  }
+
+  &__dots {
+    grid-column: 11 / 12;
+    grid-row: 2 / 4;
+    justify-self: end;
+    align-self: center;
+  }
+}
+
+.nav {
+  &__logo {
+    grid-column: 2 / 4;
+  }
+
+  &__pages {
+    grid-column: 4 / 8;
+    @extend %inter-bold;
+    color: $white;
+
+    &--original {
+      position: absolute;
+      width: 161px;
+      top: 10px;
+      left: -14px;
+      border-top: 2px solid $primary;
+      align-self: center;
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+      li:nth-child(2){ position: relative;}
+    }
+    li {
+      margin-right: 80px;
+    }
+  }
+
+  &__search i {
+    grid-column: 8 / 9;
+    justify-self: end;
+    height: 20px;
+    width: 20px;
+  }
+
+  &__social {
+    grid-column: 9 / 11;
+    width: 176px;
+    padding: 0 42px;
+    border-left: 1px solid $white;
+    border-right: 1px solid $white;
+    i {
+      height: 32px;
+      width: 32px;
+    }
+    ul {
+      display: flex;
+      list-style: none;
+    }
+    li {
+      margin-right: 16px;
+    }
+  }
+
+  &__btn {
+    grid-column: 11 / 12;
+    button {
+      height: 57px;
+      width: 154px;
+      border: 1px solid $white;
+      @extend %inter-extrabold;
+      font-size: 1rem;
+      color: $white;
+      background-color: transparent;
+    }    
+  }
+}

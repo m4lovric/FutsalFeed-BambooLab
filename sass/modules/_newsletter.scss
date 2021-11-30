@@ -1,0 +1,95 @@
+@import 'base';
+
+.newsletter__container {
+  width: 100%;
+  background-color: $black;
+}
+
+.newsletter {
+  height: 560px;
+  max-width: 1920px;
+  margin: 0 auto;
+  @extend %grid-12;
+  grid-template-rows: repeat(4, 140px);
+  align-items: center;
+  background-color: $black;
+  color: $white;
+  font-family: $inter;
+  
+  &__illustration {
+    grid-column: 3 / 5;
+    grid-row: 1 / 4;
+    margin-top: 89px;
+  }
+
+  &__title {
+    grid-column: 5 / 9;
+    align-self: end;
+    margin-bottom: 0;
+    font-weight: 800;
+  }
+
+  &__subtitle {
+    grid-column: 5 / 8;
+  }
+
+  &__input {
+    grid-column: 5 / 9;
+    height: 68px;
+    padding-left: 8%;
+    border: 1px solid $primary;
+    color: $white;
+    @extend %inter-extrabold;
+    font-size: 1em;
+    background-color: transparent;
+  }
+
+  &__input::placeholder {
+    color: $white;
+    @extend %inter-extrabold;
+    font-size: 1em;
+  }
+
+  &__btn {
+    grid-column: 9 / 11;
+    height: 68px;
+    @extend %inter-extrabold;
+    font-size: 1em;
+    color: $white;
+    background-color: $primary;
+  }
+
+  &__terms {
+    grid-column: 5 / 8;
+    display: flex;
+    align-self: start;
+    font-weight: 400;
+    font-size: 13px;
+    color: $white-opacity;
+
+    input {
+      height: 20px;
+      width: 20px;
+    }
+
+    input:before {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      content: "\2714";
+      padding-bottom: 5px;
+      padding-left: 5px;
+      border: 1px solid $primary;
+      border-radius: 2px;
+      background-color: $black;
+      transition: .2;
+    }
+
+    input:checked {
+      color: $white;
+    }
+    p {
+      margin: 5px 0 0 18px;
+    }
+  }
+}

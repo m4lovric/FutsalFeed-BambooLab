@@ -1,0 +1,70 @@
+$inter: 'Inter', sans-serif;
+
+$primary: #DF542E;
+$yellow: #D8A42F;
+
+$white: #FFF;
+$white-opacity: rgba(255,255,255,0.7);
+$white-2 : rgba(255,255,255,0.2);
+
+$black: #000;
+$black-l: #101010;
+$black-opacity: rgba($color: #000, $alpha: 0.2);
+$black16-5: rgba(16, 16, 16, 0.5);
+
+$gray: #D8D8D8;
+$gray-light: #F4F4F4; 
+
+
+%inter-reg {
+  font-family: $inter;
+  font-weight: 400;
+}
+
+%inter-med {
+  font-family: $inter;
+  font-weight: 500;
+}
+
+%inter-semibold {
+  font-family: $inter;
+  font-weight: 600;
+}
+
+%inter-bold {
+  font-family: $inter;
+  font-weight: 700;
+}
+
+%inter-extrabold {
+  font-family: $inter;
+  font-weight: 800;
+}
+
+%inter-400 {
+  font-family: $inter;
+  font-weight: 400;
+}
+
+%grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 24px;
+}
+
+%grid-6 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 24px;
+}
+
+%grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 24px;
+}
+
+%inter-reg {
+  font-family: $inter;
+  font-weight: 400;
+}

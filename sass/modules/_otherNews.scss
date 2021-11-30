@@ -1,0 +1,130 @@
+@import 'base';
+
+.otherNews__container{
+  width: 100%;
+}
+
+.otherNews {
+  height: 1875px;
+  max-width: 1920px;
+  margin: 16vh auto 0 auto;
+  background-color: $white;
+  @extend %grid-12;
+  grid-template-rows: repeat(8, 1fr);
+  font-family: $inter;
+
+  &__article:nth-child(6){ border-bottom: 1px solid $black-opacity; }
+  &__article {
+    min-height: 252px;
+    grid-column: 2 / 8;
+    @extend %grid-6;
+    border-top: 1px solid $black-opacity;
+  }
+
+  &__more {
+    grid-column: 2 / 4;
+    grid-row: 7 / 8;
+    color: $primary;
+  }
+
+  &__upcoming {
+    height: 430px;
+    grid-column: 9 / 12;
+    grid-row: 1 / 3;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    margin-bottom: 15vh;
+
+    h4 { 
+      font-size: 1.2rem;
+      margin-top: 0;
+      @extend %inter-extrabold;
+    }
+    article {
+      display: grid;
+      grid-template-columns: 10% 90%;
+    }
+
+    &--id {
+      color: $black16-5;
+      @extend %inter-extrabold;
+      font-size: 0.9rem;
+      text-align: start;
+      display: inline-block;
+    }
+
+    &--date {
+      color: $primary;
+      @extend %inter-extrabold;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+
+    &--title {
+      line-height: 1.5;
+      font-size: 1.25rem;
+      justify-self: left;
+      grid-column: 2 / 3;
+      margin-top: 0;
+      margin-right: 20%;
+    }
+  }
+
+  &__ranking {
+    grid-column: 9 / 12;
+    grid-row: 3 / 5;
+    @extend %grid-3;
+
+    article:last-child {
+      text-align: end;
+    }
+  }
+}
+
+.article {
+  &--original {
+    height: 360px;
+  }
+}
+
+.ranking {
+
+  h6 {
+    @extend %inter-extrabold;
+    color: $black16-5;
+    font-size: 16px;
+  }
+
+  &__line {
+    grid-column: 1 / 4;
+    height: 0;
+    border-top: 1px solid $black-l;
+  }
+
+  &__title {
+    grid-column: 1 / 3;
+    font-size: 1.2rem;
+    @extend %inter-extrabold;
+  }
+
+  &__date {
+    grid-column: 3 / 4;
+    font-size: 1.2rem;
+    @extend %inter-extrabold;
+  }
+
+  &__team {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 20px;
+    margin: 16px 0;
+
+    div {
+      height: 16px;
+      width: 28px;
+      margin-right: 5%;
+      background-color: $gray;
+    }
+  }
+}
